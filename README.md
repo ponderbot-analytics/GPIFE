@@ -1,2 +1,2 @@
-# GPIFE
-Generating product images for ecommerce
+# Generating Product Images for E-commerce
+
