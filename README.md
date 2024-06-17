@@ -24,7 +24,14 @@ Build a model to generate the high quality product image for e-commerce for a gi
 
 ### 5. Fine-Tuned Model With LoRA Technique  
 
-![6](https://github.com/ponderbot-analytics/GPIFE/assets/163169121/a354a75c-d258-46aa-8766-48610a28a842)
+![6](https://github.com/ponderbot-analytics/GPIFE/assets/163169121/a354a75c-d258-46aa-8766-48610a28a842)  
+
+### 6. Evaluation of Different Model  
+
+![metric](https://github.com/ponderbot-analytics/GPIFE/assets/163169121/d0d06c76-0500-4c05-a93b-45d217ee71b7)  
+Higher the CLIP scores imply better the performance of model to generate high quality image
+
+
 
 
 
