@@ -13,7 +13,7 @@ def get_requirements(file_path:str)->List[str]:
 
 setup(
     name='gpife',
-    version=0.0.1,
+    version='0.0.1',
     author='lalit',
     packages=find_packages(),
     install_requires = get_requirements(r'requirements.txt'),
