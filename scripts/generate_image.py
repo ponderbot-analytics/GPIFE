@@ -11,7 +11,7 @@ class TextToImageGenerator:
         self.pipeline = AutoPipelineForText2Image.from_pretrained(self.pretrained_model_path, torch_dtype=torch.float16).to("cuda")
         self.pipeline.load_lora_weights(self.lora_weight_path, weight_name="pytorch_lora_weights.safetensors")
 
-    def generate_image(self, prompt, num_inference_steps):
+    def generate_image(self, prompt, num_inference_steps = 50):
         if self.pipeline is None:
             raise ValueError("The pipeline has not been loaded. Call load_weight() first.")
         image = self.pipeline(prompt, num_inference_steps=num_inference_steps).images[0]
