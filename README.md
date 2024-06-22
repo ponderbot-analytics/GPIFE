@@ -39,14 +39,14 @@ Higher the CLIP scores imply better the performance of model to generate high qu
 Install the repository
 
 ```bash
-  pip install git+https://github.com/ponderbot-analytics/GPIFE.git
+pip install git+https://github.com/ponderbot-analytics/GPIFE.git
 ```
     
 ## Inference
 
 Import the TextToImageGenerator class
 ```bash
-  from scripts.inference import TextToImageGenerator
+from scripts.inference import TextToImageGenerator
 ```
 
 Download the model weight ([pretrained model weights](https://drive.google.com/drive/folders/1oCSQ4Skdm5FjwnsTr1Mj8fp0U3HVsvRO) and [lora weight](https://drive.google.com/drive/folders/1t3IE_nQlZ_eaMBmrv8t6r5AtbYCPgAxa)) 
@@ -54,53 +54,52 @@ Download the model weight ([pretrained model weights](https://drive.google.com/d
 Create the text_to_image object
 
 ```bash
-    text_to_image = TextToImageGenerator(pretrained_model_path, lora_weight_path)
-text_to_image.load_weight()
+text_to_image = TextToImageGenerator(pretrained_model_path, lora_weight_path)
 ```
 
 Load the weights
 ```bash
-    text_to_image.load_weight()
+text_to_image.load_weight()
 ```
 
 Generate the image by providing the prompt
 ```bash
-    image = text_to_image.generate_image(prompt)
+image = text_to_image.generate_image(prompt)
 ```
 ## Training
 
 Clone the repository
 
 ```bash
-  git clone https://github.com/ponderbot-analytics/GPIFE.git
+git clone https://github.com/ponderbot-analytics/GPIFE.git
 ```
 
 Install dependencies
 
 ```bash
-  pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 Go to the script directory
 
 ```bash
-  cd GPIFE/scripts
+cd GPIFE/scripts
 ```
 
 Run the train.py script
 
 ```bash
-  accelerate launch train.py \
-    --pretrained_model_name_or_path=model_path \
-    --mixed_precision="fp16" \
-    --resolution=512 \
-    --dataset_name=dataset_path \
-    --train_batch_size=1 \
-    --num_train_epochs=5 \
-    --learning_rate=1e-06 \
-    --output_dir=$output_dir_path \
-    --checkpointing_steps=1000 \
-    --center_crop \
-    --random_flip \
+accelerate launch train.py \
+  --pretrained_model_name_or_path=model_path \
+  --mixed_precision="fp16" \
+  --resolution=512 \
+  --dataset_name=dataset_path \
+  --train_batch_size=1 \
+  --num_train_epochs=5 \
+  --learning_rate=1e-06 \
+  --output_dir=$output_dir_path \
+  --checkpointing_steps=1000 \
+  --center_crop \
+  --random_flip \
 ```
 
