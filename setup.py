@@ -16,7 +16,6 @@ setup(
     version='0.0.1',
     author='lalit',
     packages=find_packages(),
-    packages=['gpife']
     install_requires = get_requirements(r'requirements.txt'),
     description='This is about generating the high quality product image from given text prompt for E-commerce'
 )
