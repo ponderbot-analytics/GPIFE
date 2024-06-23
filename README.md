@@ -74,6 +74,12 @@ Clone the repository
 git clone https://github.com/ponderbot-analytics/GPIFE.git
 ```
 
+Go to the GPIFE directory
+
+```bash
+cd GPIFE
+```
+
 Install dependencies
 
 ```bash
@@ -83,17 +89,17 @@ pip install -r requirements.txt
 Go to the script directory
 
 ```bash
-cd GPIFE/scripts
+cd scripts
 ```
 
 Run the train.py script
 
 ```bash
 accelerate launch train.py \
-  --pretrained_model_name_or_path=model_path \
+  --pretrained_model_name_or_path=$model_path \
   --mixed_precision="fp16" \
   --resolution=512 \
-  --dataset_name=dataset_path \
+  --dataset_name=$dataset_path \
   --train_batch_size=1 \
   --num_train_epochs=5 \
   --learning_rate=1e-06 \
